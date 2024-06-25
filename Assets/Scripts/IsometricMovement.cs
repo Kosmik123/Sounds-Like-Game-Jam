@@ -1,7 +1,6 @@
 using UnityEngine;
 using Bipolar;
 using Bipolar.Input;
-using System.Diagnostics.Contracts;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class IsometricMovement : MonoBehaviour
@@ -11,6 +10,8 @@ public class IsometricMovement : MonoBehaviour
 
 	[SerializeField]
 	private float speed = 5;
+	public float Speed => speed;
+
 	[SerializeField]
 	private Serialized<IMoveInputProvider> inputProvider;
 
