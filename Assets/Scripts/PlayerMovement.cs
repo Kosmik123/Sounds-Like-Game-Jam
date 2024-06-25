@@ -9,7 +9,7 @@ public class PlayerMovement : MonoBehaviour
 	public Rigidbody2D Rigidbody => this.GetRequired(ref _rigidbody);
 
 	[SerializeField]
-	private float speed;
+	private float speed = 5;
 	[SerializeField]
 	private Serialized<IMoveInputProvider> inputProvider;
 
