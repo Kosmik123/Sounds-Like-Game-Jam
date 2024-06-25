@@ -14,7 +14,15 @@ public class CatMovement : MonoBehaviour
 	private ContactPoint2D[] contacts = new ContactPoint2D[4];
 
 	private Rigidbody2D _rigidbody;
-	public Rigidbody2D Rigidbody => _rigidbody;
+	public Rigidbody2D Rigidbody
+	{
+		get
+		{
+			if (_rigidbody == null)
+				_rigidbody = GetComponent<Rigidbody2D>();
+			return _rigidbody;
+		}
+	}
 
 	private bool isMovingToTarget;
 	public bool IsMovingToTarget => isMovingToTarget;

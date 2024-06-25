@@ -1,9 +1,10 @@
 using UnityEngine;
 using Bipolar;
 using Bipolar.Input;
+using System.Diagnostics.Contracts;
 
 [RequireComponent(typeof(Rigidbody2D))]
-public class PlayerMovement : MonoBehaviour
+public class IsometricMovement : MonoBehaviour
 {
 	private Rigidbody2D _rigidbody;
 	public Rigidbody2D Rigidbody => this.GetRequired(ref _rigidbody);
