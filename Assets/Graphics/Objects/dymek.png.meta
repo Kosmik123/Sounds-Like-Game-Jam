@@ -1,19 +1,25 @@
 fileFormatVersion: 2
-guid: 5f42dc847f7c70f4594aa24c5dc841e4
+guid: 9d0bf64807e2fb04db0d8a7dc2f0edef
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6883192640210148189
-    second: Furniture_Trash_Mix1_0
+      213: -2023902149081082231
+    second: dymek_0
   - first:
-      213: -6261628039341559878
-    second: Furniture_Trash_Mix1_1
+      213: 5758728207975032616
+    second: dymek_1
   - first:
-      213: -1495049892055163440
-    second: Furniture_Trash_Mix1_2
+      213: -2234937266607676136
+    second: dymek_2
   - first:
-      213: -4305254790453313273
-    second: Furniture_Trash_Mix1_3
+      213: 9055086425154561825
+    second: dymek_3
+  - first:
+      213: -4898934063923320520
+    second: dymek_4
+  - first:
+      213: -1541780398210342480
+    second: dymek_5
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -58,7 +64,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 180
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -104,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Furniture_Trash_Mix1_0
+      name: dymek_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
+        x: 34
+        y: 18
+        width: 39
+        height: 48
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -118,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a4e0bf23ccf970a0800000000000000
-      internalID: -6883192640210148189
+      spriteID: 9865fdfe7b7a9e3e0800000000000000
+      internalID: -2023902149081082231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture_Trash_Mix1_1
+      name: dymek_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
+        x: 68
+        y: 19
+        width: 69
+        height: 79
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -139,20 +145,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abfab67497a3a19a0800000000000000
-      internalID: -6261628039341559878
+      spriteID: 827af5a4bcc1bef40800000000000000
+      internalID: 5758728207975032616
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture_Trash_Mix1_2
+      name: dymek_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
+        x: 149
+        y: 17
+        width: 88
+        height: 101
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -160,20 +166,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ddd0965b04804be0800000000000000
-      internalID: -1495049892055163440
+      spriteID: 8152190b568ebf0e0800000000000000
+      internalID: -2234937266607676136
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture_Trash_Mix1_3
+      name: dymek_3
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
+        x: 245
+        y: 18
+        width: 69
+        height: 83
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -181,8 +187,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7014b7b0499a044c0800000000000000
-      internalID: -4305254790453313273
+      spriteID: 127acc5b0212aad70800000000000000
+      internalID: 9055086425154561825
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dymek_4
+      rect:
+        serializedVersion: 2
+        x: 328
+        y: 27
+        width: 41
+        height: 48
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8392acdac6d730cb0800000000000000
+      internalID: -4898934063923320520
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: dymek_5
+      rect:
+        serializedVersion: 2
+        x: 384
+        y: 37
+        width: 23
+        height: 28
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0b1230385ee7a9ae0800000000000000
+      internalID: -1541780398210342480
       vertices: []
       indices: 
       edges: []
