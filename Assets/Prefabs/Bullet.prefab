@@ -45,6 +45,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bac8b3d36999f384e9933afec8ed6e13, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  lifeDuration: 10
   speed: 10
 --- !u!50 &5281674356712013072
 Rigidbody2D:
@@ -61,12 +62,12 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 1
+  m_GravityScale: 0
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
-  m_Constraints: 0
+  m_Constraints: 4
 --- !u!1 &9163083206655745542
 GameObject:
   m_ObjectHideFlags: 0

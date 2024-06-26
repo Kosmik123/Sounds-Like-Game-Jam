@@ -86,7 +86,7 @@ namespace Bipolar.SpritesetAnimation
 		}
 
 		public int CurrentFrameIndex => baseFrameIndex + frameIndexOffset;
-        public int SpriteIndex => currentAnimationIndex * spriteset.ColumnCount + CurrentFrameIndex;
+        public int SpriteIndex => spriteset ? currentAnimationIndex * spriteset.ColumnCount + CurrentFrameIndex : -1;
 
         public int CurrentSequenceLength => overrideSequenceLength > 0
             ? Mathf.Min(overrideSequenceLength, spriteset.Count - currentAnimationIndex * spriteset.ColumnCount)
@@ -120,7 +120,8 @@ namespace Bipolar.SpritesetAnimation
 
         public void RefreshSprite()
         {
-            spriteRenderer.sprite = spriteset[SpriteIndex];
+            if (spriteRenderer && spriteset)
+                spriteRenderer.sprite = spriteset[SpriteIndex];
         }
 
         private void ValidateAnimationIndex()

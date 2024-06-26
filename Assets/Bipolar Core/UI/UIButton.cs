@@ -8,7 +8,7 @@ namespace Bipolar.UI
     {
         public event System.Action<UIButton> OnClicked;
         public event System.Action<UIButton, bool> OnHighlightChanged;
-        
+
         [SerializeField]
         private TMP_Text label;
         public TMP_Text Label => label;

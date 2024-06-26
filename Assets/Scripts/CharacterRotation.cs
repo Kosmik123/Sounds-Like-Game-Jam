@@ -1,4 +1,5 @@
 using Bipolar.SpritesetAnimation;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class CharacterRotation : MonoBehaviour
@@ -9,7 +10,14 @@ public class CharacterRotation : MonoBehaviour
 	private Rigidbody2D rigidbody;
 
 	[SerializeField]
+	private bool flipScale = false;
+	public bool FlipScale => flipScale;
+
+	[SerializeField, HideIf(nameof(FlipScale))]
 	private SpriteRenderer spriteRenderer;
+	[SerializeField, ShowIf(nameof(FlipScale))]
+	private Transform graphic;
+	
 	[SerializeField]
 	private SpritesetAnimator spritesetAnimator;
 
@@ -24,14 +32,32 @@ public class CharacterRotation : MonoBehaviour
 		float xSpeed = velocity.x;
 		if (xSpeed < -SmallSpeed)
 		{
-			spriteRenderer.flipX = true;
+			if (flipScale)
+			{
+				var localScale = graphic.localScale;
+				localScale.x = -1;
+				graphic.localScale = localScale;
+			}
+			else
+			{
+				spriteRenderer.flipX = true;
+			}
 		}
 		else if (xSpeed > SmallSpeed)
 		{
-			spriteRenderer.flipX = false;
+			if (flipScale)
+			{
+				var localScale = graphic.localScale;
+				localScale.x = 1;
+				graphic.localScale = localScale;
+			}
+			else
+			{
+				spriteRenderer.flipX = false;
+			}
 		}
 
-		float ySpeed = velocity.y;
+			float ySpeed = velocity.y;
 		if (ySpeed < -SmallSpeed)
 		{
 			spritesetAnimator.CurrentAnimationIndex = 0;
