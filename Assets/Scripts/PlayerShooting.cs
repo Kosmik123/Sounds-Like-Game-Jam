@@ -17,7 +17,7 @@ public class PlayerShooting : MonoBehaviour
 			var mouseScreenPosition = Input.mousePosition;
 			var mouseWorldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
 
-			var direction = transform.position - mouseScreenPosition;
+			var direction = transform.position - mouseWorldPosition;
 			direction.z = 0;
 			var emitParams = new EmitParams()
 			{
