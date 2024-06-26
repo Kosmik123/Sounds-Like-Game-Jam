@@ -7,6 +7,11 @@ namespace Bipolar.Pooling
     {
         [SerializeField]
         protected T prototype;
+        public T Prototype
+        {
+            get => prototype;
+            set => prototype = value;   
+        }
 
         private readonly Stack<T> pool = new Stack<T>();
 
