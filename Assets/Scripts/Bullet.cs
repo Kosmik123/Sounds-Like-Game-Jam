@@ -11,6 +11,9 @@ public class Bullet : MonoBehaviour
 	private IObjectPool<Bullet> sourcePool;
 
 	[SerializeField]
+	private float lifeDuration = 10;
+
+	[SerializeField]
 	private float speed;
 	public float Speed
 	{
@@ -22,6 +25,7 @@ public class Bullet : MonoBehaviour
 	{
 		gameObject.SetActive(true);
 		Rigidbody.velocity = direction.normalized * speed;
+		Invoke(nameof(Kill), lifeDuration);
 	}
 
 	private void OnDisable()
@@ -35,6 +39,11 @@ public class Bullet : MonoBehaviour
 	}
 
 	private void OnCollisionEnter2D(Collision2D collision)
+	{
+		Kill();
+	}
+
+	private void Kill()
 	{
 		gameObject.SetActive(false);
 		sourcePool.Release(this);
