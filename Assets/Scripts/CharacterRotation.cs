@@ -1,3 +1,4 @@
+using Bipolar.SpritesetAnimation;
 using UnityEngine;
 
 public class CharacterRotation : MonoBehaviour
@@ -9,6 +10,8 @@ public class CharacterRotation : MonoBehaviour
 
 	[SerializeField]
 	private SpriteRenderer spriteRenderer;
+	[SerializeField]
+	private SpritesetAnimator spritesetAnimator;
 
 	[SerializeField]
 	private Sprite frontSprite;
@@ -31,11 +34,11 @@ public class CharacterRotation : MonoBehaviour
 		float ySpeed = velocity.y;
 		if (ySpeed < -SmallSpeed)
 		{
-			spriteRenderer.sprite = frontSprite;
+			spritesetAnimator.CurrentAnimationIndex = 0;
 		}
 		else if (ySpeed > SmallSpeed)
 		{
-			spriteRenderer.sprite = backSprite;
+			spritesetAnimator.CurrentAnimationIndex = 1;
 		}
 	}
 }
