@@ -23,6 +23,10 @@ public class PlayerAnimation : MonoBehaviour
 	[SerializeField]
 	private Transform scaledObject;
 
+	[Header("Other")]
+	[SerializeField]
+	private float movementAnimationSpeed = 4;
+
 	private void Update()
 	{
 		float sqrBreathingSpeed = visualBreathingSpeedThreashold * visualBreathingSpeedThreashold;
@@ -41,7 +45,7 @@ public class PlayerAnimation : MonoBehaviour
 		else if (sqrSpeed > sqrBreathingSpeed)
 		{
 			scale.y = Mathf.MoveTowards(scale.y, 1, TransitionDelta());
-			spritesetAnimator.AnimationSpeed = 4;
+			spritesetAnimator.AnimationSpeed = movementAnimationSpeed;
 		}
 
 		scaledObject.localScale = scale;

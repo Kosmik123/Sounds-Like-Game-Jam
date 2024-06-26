@@ -1,19 +1,19 @@
 fileFormatVersion: 2
-guid: 5f42dc847f7c70f4594aa24c5dc841e4
+guid: ea79397d0d254b24faeb301946392c64
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -6883192640210148189
-    second: Furniture_Trash_Mix1_0
+      213: 7369480233919999626
+    second: battle girl_0
   - first:
-      213: -6261628039341559878
-    second: Furniture_Trash_Mix1_1
+      213: 1824664831618676948
+    second: battle girl_1
   - first:
-      213: -1495049892055163440
-    second: Furniture_Trash_Mix1_2
+      213: 2736834636163722758
+    second: battle girl_2
   - first:
-      213: -4305254790453313273
-    second: Furniture_Trash_Mix1_3
+      213: -3041885093658901946
+    second: battle girl_3
   externalObjects: {}
   serializedVersion: 12
   mipmaps:
@@ -58,7 +58,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 180
+  spritePixelsToUnits: 140
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -100,89 +100,113 @@ TextureImporter:
     overridden: 0
     androidETC2FallbackOverride: 0
     forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Furniture_Trash_Mix1_0
+      name: battle girl_0
       rect:
         serializedVersion: 2
-        x: 0
-        y: 256
-        width: 256
-        height: 256
+        x: 23
+        y: 112
+        width: 70
+        height: 87
       alignment: 0
-      pivot: {x: 0, y: 0}
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a4e0bf23ccf970a0800000000000000
-      internalID: -6883192640210148189
+      spriteID: a8e60124a37a54660800000000000000
+      internalID: 7369480233919999626
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture_Trash_Mix1_1
+      name: battle girl_1
       rect:
         serializedVersion: 2
-        x: 256
-        y: 256
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 139
+        y: 94
+        width: 111
+        height: 154
+      alignment: 9
+      pivot: {x: 0.49155667, y: 0.11963713}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abfab67497a3a19a0800000000000000
-      internalID: -6261628039341559878
+      spriteID: 4d877c23ff2825910800000000000000
+      internalID: 1824664831618676948
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture_Trash_Mix1_2
+      name: battle girl_2
       rect:
         serializedVersion: 2
-        x: 0
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 8
+        y: 8
+        width: 32
+        height: 39
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0ddd0965b04804be0800000000000000
-      internalID: -1495049892055163440
+      spriteID: 60e2689e9903bf520800000000000000
+      internalID: 2736834636163722758
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Furniture_Trash_Mix1_3
+      name: battle girl_3
       rect:
         serializedVersion: 2
-        x: 256
-        y: 0
-        width: 256
-        height: 256
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        x: 124
+        y: 21
+        width: 28
+        height: 49
+      alignment: 2
+      pivot: {x: 0.5, y: 1}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7014b7b0499a044c0800000000000000
-      internalID: -4305254790453313273
+      spriteID: 642c7e8bf9d09c5d0800000000000000
+      internalID: -3041885093658901946
       vertices: []
       indices: 
       edges: []
