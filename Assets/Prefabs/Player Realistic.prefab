@@ -14,18 +14,18 @@ PrefabInstance:
     - target: {fileID: 4716074382382161608, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: spriteset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 15ab92e8d5604214b80d9320d9760d64, type: 2}
     - target: {fileID: 4716074382382161608, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: spriteRenderer
       value: 
       objectReference: {fileID: 7801999673199269742}
     - target: {fileID: 4716074382382161608, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: currentAnimationIndex
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7011762066241556762, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: speed
-      value: 2
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7011762066241556764, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: m_RootOrder
