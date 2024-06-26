@@ -12,5 +12,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7e64c8a44d56e394fb7dce0298f4f92a, type: 3}
   m_Name: dziewoja
   m_EditorClassIdentifier: 
-  columnCount: 1
-  sprites: []
+  columnCount: 3
+  sprites:
+  - {fileID: -2075187012632141287, guid: 97c67c19cf6eaba4791ff4b599bc74ea, type: 3}
+  - {fileID: -7523344275894001107, guid: 97c67c19cf6eaba4791ff4b599bc74ea, type: 3}
+  - {fileID: 122077842108266272, guid: 97c67c19cf6eaba4791ff4b599bc74ea, type: 3}
+  - {fileID: -4571828015118065507, guid: bf887ae6506455848a5d6103a0fde3bc, type: 3}
+  - {fileID: -8741071136333515919, guid: bf887ae6506455848a5d6103a0fde3bc, type: 3}
+  - {fileID: -2796314236206107100, guid: bf887ae6506455848a5d6103a0fde3bc, type: 3}
