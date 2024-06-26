@@ -1,20 +1,20 @@
 using Bipolar.Pooling;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
-{
-
-}
-
 public class BulletsPool : ComponentPool<Bullet> { }
 
 public class ShootingManager : MonoBehaviour
 {
+	[SerializeField]
+	public Bullet bulletPrototype;
+
 	private BulletsPool bulletsPool;
 
 	private void Awake()
 	{
 		bulletsPool = gameObject.AddComponent<BulletsPool>();
+		bulletsPool.hideFlags |= HideFlags.HideInInspector;
+		bulletsPool.Prototype = bulletPrototype;
 	}
 
 	private void Update()
