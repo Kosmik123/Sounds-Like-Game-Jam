@@ -1,5 +1,49 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &1999879705129738707
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1264705326215867955}
+  - component: {fileID: 4469570388549844860}
+  m_Layer: 0
+  m_Name: Bullets Shooting
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1264705326215867955
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999879705129738707}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 7011762066241556764}
+  m_RootOrder: 2
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4469570388549844860
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1999879705129738707}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a705b4d8864d87a41b8a3e1d1ebe9829, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletPrototype: {fileID: 815836511786010033, guid: f76c01c5bac0a80448054e12609df766, type: 3}
 --- !u!1 &7011762066241556765
 GameObject:
   m_ObjectHideFlags: 0
@@ -15,7 +59,6 @@ GameObject:
   - component: {fileID: 7011762066241556760}
   - component: {fileID: 3861731078844594525}
   - component: {fileID: 8601750380529366534}
-  - component: {fileID: 6320146714952598802}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -36,6 +79,7 @@ Transform:
   m_Children:
   - {fileID: 6687338669086163280}
   - {fileID: 5268694492726918288}
+  - {fileID: 1264705326215867955}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -134,20 +178,6 @@ MonoBehaviour:
   spriteRenderer: {fileID: 3402726993336248494}
   frontSprite: {fileID: 21300000, guid: 819d529fc0b06324dac0df4eee284204, type: 3}
   backSprite: {fileID: 21300000, guid: 0dc89531979e99c428fdba880dabaecc, type: 3}
---- !u!114 &6320146714952598802
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7011762066241556765}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a705b4d8864d87a41b8a3e1d1ebe9829, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  bulletsParticleSystem: {fileID: 0}
-  bulletsSpeed: 8
 --- !u!1 &7666817600241818076
 GameObject:
   m_ObjectHideFlags: 0
