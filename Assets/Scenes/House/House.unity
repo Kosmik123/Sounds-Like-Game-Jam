@@ -281,6 +281,7 @@ GameObject:
   - component: {fileID: 678718946}
   - component: {fileID: 678718945}
   - component: {fileID: 678718947}
+  - component: {fileID: 678718948}
   m_Layer: 0
   m_Name: Furniture_TopTVOff_LightWood
   m_TagString: Untagged
@@ -378,9 +379,7 @@ PolygonCollider2D:
   m_AutoTiling: 0
   m_Points:
     m_Paths:
-    - - {x: 1.1833334, y: -1.1666667}
-      - {x: 1.2777778, y: -1.1166667}
-      - {x: 1.2833334, y: -1.1055555}
+    - - {x: 1.2833334, y: -1.1055555}
       - {x: 1.2833334, y: -0.53333336}
       - {x: 1.2777778, y: -0.37777779}
       - {x: 1.2666667, y: -0.36111113}
@@ -410,24 +409,36 @@ PolygonCollider2D:
       - {x: -1.2611111, y: 0.022222223}
       - {x: -1.2611111, y: -0.4166667}
       - {x: -1.1944444, y: -0.46111113}
-      - {x: -1.2, y: -0.5277778}
-      - {x: -1.138889, y: -0.56111115}
-      - {x: -1.1111112, y: -0.55}
-      - {x: -1.0777779, y: -0.5222222}
       - {x: -0.9166667, y: -0.6055556}
       - {x: -0.42222223, y: -0.85}
       - {x: 0.21111111, y: -1.1777778}
       - {x: 0.50555557, y: -1.3277779}
-      - {x: 0.51111114, y: -1.4}
-      - {x: 0.53888893, y: -1.4222223}
-      - {x: 0.6666667, y: -1.4222223}
-      - {x: 0.6944445, y: -1.4166667}
-      - {x: 1.0444444, y: -1.2277778}
-      - {x: 1.0611111, y: -1.2277778}
+      - {x: 0.68853176, y: -1.409177}
+      - {x: 1.050954, y: -1.2277778}
     - - {x: 0.5, y: 0.19444445}
       - {x: 0.4888889, y: 0.17777778}
       - {x: 0.49444446, y: 0.033333335}
       - {x: 0.50555557, y: 0.03888889}
+--- !u!114 &678718948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 678718944}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70c681a309ffde7489a13aff877e3674, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 678718945}
+  spriteset: {fileID: 11400000, guid: 642551cccdc79bf4095bcbc1c188dfcf, type: 2}
+  animationSpeed: 4
+  isReversed: 0
+  currentAnimationIndex: 0
+  overrideSequenceLength: 0
+  frameIndexOffset: 0
+  baseFrameIndex: 0
 --- !u!1 &678745035
 GameObject:
   m_ObjectHideFlags: 0
