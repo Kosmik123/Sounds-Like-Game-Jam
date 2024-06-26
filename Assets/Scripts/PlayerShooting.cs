@@ -1,13 +1,21 @@
-﻿using UnityEngine;
-using static UnityEngine.ParticleSystem;
+﻿using Bipolar.Pooling;
+using UnityEngine;
+
+public class BulletsPool : ObjectPool<Bullet> { }
 
 public class PlayerShooting : MonoBehaviour
 {
 	[SerializeField]
-	private ParticleSystem bulletsParticleSystem;
+	private Bullet bulletPrototype;
 
-	[SerializeField]
-	private float bulletsSpeed = 10;
+	private BulletsPool bulletsPool;
+
+	private void Awake()
+	{
+		bulletsPool = gameObject.AddComponent<BulletsPool>();
+		bulletsPool.hideFlags |= HideFlags.HideInInspector;
+		bulletsPool.Prototype = bulletPrototype;
+	}
 
 	private void Update()
 	{
@@ -17,17 +25,15 @@ public class PlayerShooting : MonoBehaviour
 		}
 	}
 
-	public void Shoot()
+	private void Shoot()
 	{
-		var mouseScreenPosition = Input.mousePosition;
-		var mouseWorldPosition = Camera.main.ScreenToWorldPoint(mouseScreenPosition);
+		var bullet = bulletsPool.Get();
+		bullet.Init(bulletsPool);
+		bullet.transform.position = transform.position;
 
-		var direction = mouseWorldPosition - transform.position;
-		direction.z = 0;
-		var emitParams = new EmitParams()
-		{
-			velocity = direction.normalized * bulletsSpeed,
-		};
-		bulletsParticleSystem.Emit(emitParams, 1);
+		var screenMousePosition = Input.mousePosition;
+		var worldMousePosition = Camera.main.ScreenToWorldPoint(screenMousePosition);
+		var direction = worldMousePosition - transform.position;
+		bullet.Shoot(direction);
 	}
 }
