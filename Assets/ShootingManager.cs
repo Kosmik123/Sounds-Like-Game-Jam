@@ -6,13 +6,15 @@ public class Bullet : MonoBehaviour
 
 }
 
+public class BulletsPool : ComponentPool<Bullet> { }
+
 public class ShootingManager : MonoBehaviour
 {
-	private ComponentPool<Bullet> bulletsPool;
+	private BulletsPool bulletsPool;
 
 	private void Awake()
 	{
-		bulletsPool = gameObject.AddComponent<ComponentPool<Bullet>>();
+		bulletsPool = gameObject.AddComponent<BulletsPool>();
 	}
 
 	private void Update()
