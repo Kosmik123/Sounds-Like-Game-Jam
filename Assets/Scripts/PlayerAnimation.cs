@@ -1,9 +1,12 @@
-﻿using UnityEngine;
+﻿using Bipolar.SpritesetAnimation;
+using UnityEngine;
 
 public class PlayerAnimation : MonoBehaviour
 {
 	[SerializeField]
 	private Rigidbody2D rigidbody;
+	[SerializeField]
+	private SpritesetAnimator spritesetAnimator;
 
 	[SerializeField]
 	private float visualBreathingSpeedThreashold = 0.03f;
@@ -30,10 +33,15 @@ public class PlayerAnimation : MonoBehaviour
 			float airAmount = (Mathf.Sin(Mathf.PI * Time.time * speed) + 1) / 2;
 			float breathingPosition = Mathf.Lerp(exhaleYScale, inhaleYScale, airAmount);
 			scale.y = Mathf.MoveTowards(scale.y, breathingPosition, TransitionDelta());
+
+			spritesetAnimator.AnimationSpeed = 0;
+			spritesetAnimator.BaseFrameIndex = 0;
+			spritesetAnimator.RefreshSprite();
 		}
 		else if (sqrSpeed > sqrBreathingSpeed)
 		{
 			scale.y = Mathf.MoveTowards(scale.y, 1, TransitionDelta());
+			spritesetAnimator.AnimationSpeed = 4;
 		}
 
 		scaledObject.localScale = scale;

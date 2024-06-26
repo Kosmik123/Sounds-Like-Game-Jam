@@ -76,12 +76,16 @@ namespace Bipolar.SpritesetAnimation
 #endif
         private int baseFrameIndex;
         public int BaseFrameIndex
-        {
-            get => baseFrameIndex;
-            set => baseFrameIndex = value;
-        }
+		{
+			get => baseFrameIndex;
+			set
+			{
+				baseFrameIndex = value;
+                animationTimer = 1;
+			}
+		}
 
-        public int CurrentFrameIndex => baseFrameIndex + frameIndexOffset;
+		public int CurrentFrameIndex => baseFrameIndex + frameIndexOffset;
         public int SpriteIndex => currentAnimationIndex * spriteset.ColumnCount + CurrentFrameIndex;
 
         public int CurrentSequenceLength => overrideSequenceLength > 0

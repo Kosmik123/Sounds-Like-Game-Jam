@@ -276,6 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidbody: {fileID: 7011762066241556761}
+  spritesetAnimator: {fileID: 4716074382382161608}
   visualBreathingSpeedThreashold: 0.03
   transitionSpeed: 0.05
   inhaleYScale: 1.05
