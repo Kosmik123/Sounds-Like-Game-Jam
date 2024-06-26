@@ -15,12 +15,17 @@ public class IsometricMovement : MonoBehaviour
 	[SerializeField]
 	private Serialized<IMoveInputProvider> inputProvider;
 
+	private Vector2 direction;
+
 	private void Update()
 	{
-		var direction = inputProvider.Value.GetMotion();
+		direction = inputProvider.Value.GetMotion();
 		if (direction.sqrMagnitude > 1)
 			direction.Normalize();
+	}
 
+	private void FixedUpdate()
+	{
 		var velocity = direction * speed;
 		velocity.y /= 2;
 		Rigidbody.velocity = velocity;
