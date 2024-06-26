@@ -108,8 +108,8 @@ TextureImporter:
         y: 0
         width: 205
         height: 432
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.5146518, y: 0.032419935}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,8 +129,8 @@ TextureImporter:
         y: 2
         width: 172
         height: 430
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.46070808, y: 0.021513652}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -146,12 +146,12 @@ TextureImporter:
       name: Girl Frot 3_2
       rect:
         serializedVersion: 2
-        x: 561
+        x: 559
         y: 0
         width: 186
         height: 427
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: 0.51211154, y: 0.04277191}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
