@@ -1,5 +1,4 @@
-﻿using Bipolar.Input;
-using TMPro;
+﻿using TMPro;
 using UnityEngine;
 
 namespace Bipolar.UI
