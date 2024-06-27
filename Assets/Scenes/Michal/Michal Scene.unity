@@ -1495,7 +1495,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3668643487583277312, guid: cb82fadd16f8b8f4091ea3bea6764153, type: 3}
       propertyPath: currentAnimationIndex
-      value: -1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3683151019878562711, guid: cb82fadd16f8b8f4091ea3bea6764153, type: 3}
       propertyPath: m_Color.b
