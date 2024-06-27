@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class EnemyBattleController : MonoBehaviour
 {
+	public const string AttackParam = "Attack";
+
 	[SerializeField]
 	private Animator bossAnimator;
 
@@ -25,5 +27,13 @@ public class EnemyBattleController : MonoBehaviour
 	{
 		isAttacking = true;
 		int randomAttack = Random.Range(0, 3) + 1;
+		bossAnimator.SetInteger(AttackParam, randomAttack);
+	}
+
+	// called from animation event
+	private void FinishAttack()
+	{
+		isAttacking = false;
+		Invoke(nameof(Attack), AttackDelay);
 	}
 }
