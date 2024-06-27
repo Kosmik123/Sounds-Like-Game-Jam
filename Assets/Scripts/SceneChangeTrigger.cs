@@ -7,13 +7,22 @@ public class SceneChangeTrigger : MonoBehaviour
 {
     public float teleportDelay = 0.1f;
     public string SceneToLoad;
+    private bool playerInTrigger = false;
+
+    private void Update()
+    {
+        if (playerInTrigger && Input.GetKeyDown(KeyCode.E))
+        {
+            StartCoroutine(ChangeSceneAfterDelay());
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
             if (collision.CompareTag("Player"))
             {
-                StartCoroutine(ChangeSceneAfterDelay());
-            }
+            playerInTrigger = true;
+        }
     }
 
     private IEnumerator ChangeSceneAfterDelay()

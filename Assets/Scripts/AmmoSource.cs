@@ -35,6 +35,7 @@ public class AmmoSource : MonoBehaviour
 			{
 				shooting.AddBullets(note, currentAmmoCount);
 				currentAmmoCount = 0;
+				spriteRenderer.color = Color.black;
 			}
 		}
 	}
@@ -48,6 +49,8 @@ public class AmmoSource : MonoBehaviour
 			{
 				currentAmmoCount++;
 				timer = 0;
+				float progress = (float)currentAmmoCount / ammoCapacity;
+				spriteRenderer.color = Color.Lerp(Color.black, Color.white, progress);
 			}
 		}
 	}
