@@ -7,6 +7,6 @@ public class BulletType : ScriptableObject
 	[field: SerializeField, FormerlySerializedAs("bulletType")]
 	public Sprite BulletSprite { get; private set; }
 
-	[field: SerializeField, FormerlySerializedAs("bulletType")]
+	[field: SerializeField]
 	public AudioClip Sound { get; private set; }
 }
