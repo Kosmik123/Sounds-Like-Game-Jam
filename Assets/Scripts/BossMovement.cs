@@ -79,4 +79,9 @@ public class BossMovement : MonoBehaviour
             yield return null;
         }
     }
+
+	private void OnDisable()
+	{
+        StopAllCoroutines();
+	}
 }

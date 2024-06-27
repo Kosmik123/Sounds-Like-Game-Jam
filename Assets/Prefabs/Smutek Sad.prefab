@@ -500,12 +500,17 @@ MonoBehaviour:
   maxIdleDuration: 7
   isAttacking: 0
   attackDelay: 1
-  attackAudioSource: {fileID: 5530675071719552099}
-  attackSounds: []
+  audioSource: {fileID: 5530675071719552099}
+  attackSounds:
+  - {fileID: 8300000, guid: b887540297feaee45acbe2e86e24047c, type: 3}
+  - {fileID: 8300000, guid: be51076b09a6c3c44aedb865ab3aaa0b, type: 3}
+  - {fileID: 8300000, guid: 97da2a6751db21a4788dfae635800e35, type: 3}
   damagePoints:
   - {fileID: 1446690666720105325}
   maxHealth: 10
   health: 0
+  damageSound: {fileID: 8300000, guid: affbfcce251f1db479faae97e30e6fb3, type: 3}
+  deathSound: {fileID: 8300000, guid: a7d5ce07f84c31944ac65e65d3c9875f, type: 3}
   weakType: {fileID: 0}
   availableTypes:
   - {fileID: 11400000, guid: 974be6d5b5be6494592749f188009d74, type: 2}

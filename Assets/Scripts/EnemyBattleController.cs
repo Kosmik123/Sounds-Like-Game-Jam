@@ -26,7 +26,7 @@ public class EnemyBattleController : MonoBehaviour
 	[SerializeField]
 	private float attackDelay = 1;
 	[SerializeField]
-	private AudioSource attackAudioSource;
+	private AudioSource audioSource;
 	[SerializeField]
 	private AudioClip[] attackSounds;
 
@@ -37,6 +37,10 @@ public class EnemyBattleController : MonoBehaviour
 	private int maxHealth;
 	[SerializeField, ReadOnly]
 	private int health;
+	[SerializeField]
+	private AudioClip damageSound;
+	[SerializeField]
+	private AudioClip deathSound;
 
 	[Header("Bullet Types")]
 	[SerializeField, ReadOnly]
@@ -71,7 +75,7 @@ public class EnemyBattleController : MonoBehaviour
 		isAttacking = true;
 		randomAttack = Random.Range(0, 3) + 1;
 		Invoke(nameof(Attack), attackDelay);
-		attackAudioSource.PlayOneShot(attackSounds[randomAttack]);
+		audioSource.PlayOneShot(attackSounds[randomAttack - 1]);
 	}
 
 	private int randomAttack = 1;
@@ -90,14 +94,21 @@ public class EnemyBattleController : MonoBehaviour
 
 	private void Damagable_OnDamaged(BulletType bulletType)
 	{
-		if (isAttacking)
-			return;
+		if (isAttacking == false)
+			bossAnimator.SetTrigger("Damage");
 
-		bossAnimator.SetTrigger("Damage");
 		health -= bulletType == weakType ? 2 : 1;
 		if (health <= 0)
 		{
+			audioSource.PlayOneShot(deathSound);
 			bossAnimator.SetTrigger("Death");
+			CancelInvoke();
+			bossMovement.enabled = false;
+			enaabled = faaa;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+		}
+		else 
+		{
+			audioSource.PlayOneShot(damageSound);
 		}
 	}
 
