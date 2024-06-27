@@ -41,7 +41,7 @@ public class LoadingScreenManager : MonoBehaviour
         // Ensure the final progress is shown as 100% when done
         progressBar.value = 1f;
         progressText.text = "100%";
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(2.0f);
         loadingScreen.SetActive(false);
     }
 }
