@@ -7,11 +7,14 @@ public class CloseVideo : MonoBehaviour
 {
     public VideoPlayer videoPlayer;
 
-    // Update is called once per frame
-    void Update()
+    private bool wasPlaying;
+
+	void Update()
     {
-        if (videoPlayer.isPlaying==false)
-        gameObject.SetActive(false);
-        
+        if (videoPlayer.isPlaying)
+            wasPlaying = true;
+
+        if (wasPlaying && videoPlayer.isPlaying==false)
+            gameObject.SetActive(false);
     }
 }
