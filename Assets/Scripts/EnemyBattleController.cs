@@ -10,25 +10,55 @@ public class EnemyBattleController : MonoBehaviour
 
 	[Header("Attack")]
 	[SerializeField]
-	private float minAttackDelay;
+	private float minIdleDuration = 4;
 	[SerializeField]
-	private float maxAttackDelay;
+	private float maxIdleDuration = 7;
 
-	public float AttackDelay => Random.Range(minAttackDelay, maxAttackDelay);
+	public float IdleDuration => Random.Range(minIdleDuration, maxIdleDuration);
 
 	[SerializeField, ReadOnly]
 	private bool isAttacking;
 	public bool IsAttacking => isAttacking;
 
-	private void Start()
+	[SerializeField]
+	private float attackDelay = 1;
+	[SerializeField]
+	private AudioSource attackAudioSource;
+	[SerializeField]
+	private AudioClip[] attackSounds;
+
+	[Header("Damage")]
+	[SerializeField]
+	private BossDamagable[] damagePoints;
+	[SerializeField]
+	private BulletType weakType;
+
+	private void OnEnable()
 	{
-		Invoke(nameof(Attack), AttackDelay);
+		foreach (var damagable in damagePoints)
+			damagable.OnDamaged += Damagable_OnDamaged;
 	}
 
-	private void Attack()
+	private void Damagable_OnDamaged(BulletType bulletType)
+	{
+	}
+
+	private void Start()
+	{
+		Invoke(nameof(PrepareToAttack), IdleDuration);
+	}
+
+	private void PrepareToAttack()
 	{
 		isAttacking = true;
-		int randomAttack = Random.Range(0, 3) + 1;
+		randomAttack = Random.Range(0, 3) + 1;
+		Invoke(nameof(Attack), attackDelay);
+		attackAudioSource.PlayOneShot(attackSounds[randomAttack]);
+	}
+
+	private int randomAttack = 1;
+	private void Attack()
+	{
 		bossAnimator.SetInteger(AttackParam, randomAttack);
 	}
 
@@ -36,6 +66,12 @@ public class EnemyBattleController : MonoBehaviour
 	private void FinishAttack()
 	{
 		isAttacking = false;
-		Invoke(nameof(Attack), AttackDelay);
+		Invoke(nameof(PrepareToAttack), IdleDuration);
+	}
+
+	private void OnDisable()
+	{
+		foreach (var damagable in damagePoints)
+			damagable.OnDamaged -= Damagable_OnDamaged;
 	}
 }
