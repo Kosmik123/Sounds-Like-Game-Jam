@@ -5,13 +5,16 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 0
-    path: Assets/Scenes/DominikScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Title/Title.unity
+    guid: dc7e8024e6687814aac0923471997bfc
   - enabled: 1
     path: Assets/Scenes/House/AbasRoom.unity
     guid: 57767e231242bc344af4119c18b00e85
   - enabled: 1
     path: Assets/Scenes/House/KitchenAndLivingroom.unity
     guid: 7087f6655ec7c25459186f14e1ee3bf5
+  - enabled: 1
+    path: Assets/Scenes/Magiczny Swiat/Boss.unity
+    guid: f6b6b1e2d027d0a47ad5a64d70315e16
   m_configObjects: {}

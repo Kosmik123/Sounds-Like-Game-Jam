@@ -14,8 +14,8 @@ namespace Bipolar
         [SerializeReference]
         private UnityEventBase[] events;
     }
-
-    [CustomEditor(typeof(ComponentEvents))]
+#if UNITY_EDITOR
+	[CustomEditor(typeof(ComponentEvents))]
     public class ComponentEventsEditor : Editor
     {
         private static readonly Type[] unityEventTypesByGenericParametersCount =
@@ -84,4 +84,5 @@ namespace Bipolar
 				serializedObject.ApplyModifiedProperties();
 		}
 	}
+#endif
 }
