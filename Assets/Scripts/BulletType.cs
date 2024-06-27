@@ -1,9 +1,12 @@
 ﻿using UnityEngine;
+using UnityEngine.Serialization;
 
 [CreateAssetMenu]
 public class BulletType : ScriptableObject
 {
-	[SerializeField]
-	private Sprite bulletSprite;
-	public Sprite BulletSprite => bulletSprite;
+	[field: SerializeField, FormerlySerializedAs("bulletType")]
+	public Sprite BulletSprite { get; private set; }
+
+	[field: SerializeField]
+	public AudioClip Sound { get; private set; }
 }

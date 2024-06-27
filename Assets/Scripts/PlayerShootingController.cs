@@ -1,17 +1,30 @@
-﻿using System.Collections.Generic;
+﻿using NaughtyAttributes;
+using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShootingController : MonoBehaviour
 {
 	[SerializeField]
 	private PlayerShooting playerShooting;
-
+	[SerializeField]
+	private BulletType[] availableTypes;
 	[SerializeField]
 	private List<BulletsCount> bulletsCounts;
+	[SerializeField]
+	private int currentBulletTypeIndex;
 
 	[SerializeField]
-	private BulletType currentBulletType;
-	private BulletType CurrentBulletType => currentBulletType;
+	private float shootCooldown;
+	private bool canShoot;
+
+
+	private void Awake()
+	{
+		canShoot = true;
+		bulletsCounts = new List<BulletsCount>();
+		foreach(var bulletType in availableTypes)
+			bulletsCounts.Add(new BulletsCount(bulletType, 0));
+	}
 
 	public void AddBullets(BulletType bulletType, int count)
 	{
@@ -30,10 +43,35 @@ public class PlayerShootingController : MonoBehaviour
 
 	private void Update()
 	{
-		if (Input.GetMouseButtonDown(0))
+		if (canShoot && Input.GetMouseButton(0))
 		{
-			playerShooting.Shoot(CurrentBulletType);
+			var data = bulletsCounts[currentBulletTypeIndex];
+			if (data.count > 0)
+			{
+				playerShooting.Shoot(data.bulletType);
+				canShoot = false;
+				Invoke(nameof(EnableShooting), shootCooldown);
+			}
+			else
+			{
+				// empty weapon feedback
+			}
+		}
+		else
+		{
+			float scroll = Input.mouseScrollDelta.y;
+			int direction = (int)scroll;
+			if (direction != 0)
+			{
+				currentBulletTypeIndex += direction;
+				currentBulletTypeIndex += bulletsCounts.Count;
+				currentBulletTypeIndex %= bulletsCounts.Count;
+			}
 		}
 	}
 
+	private void EnableShooting()
+	{
+		canShoot = true;
+	}
 }
