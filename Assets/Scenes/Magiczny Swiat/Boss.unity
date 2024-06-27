@@ -46426,12 +46426,51 @@ PrefabInstance:
       propertyPath: attackSounds.Array.size
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 4043230070586366722, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043230070586366722, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Mode
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043230070586366722, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Target
+      value: 
+      objectReference: {fileID: 1914709148}
+    - target: {fileID: 4043230070586366722, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_CallState
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043230070586366722, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
+      value: StartTransition
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043230070586366722, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_TargetAssemblyTypeName
+      value: Bipolar.Prototyping.TransitionValue, BipolarCore
+      objectReference: {fileID: 0}
+    - target: {fileID: 4043230070586366722, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
+      propertyPath: onDeath.m_PersistentCalls.m_Calls.Array.data[0].m_Arguments.m_ObjectArgumentAssemblyTypeName
+      value: UnityEngine.Object, UnityEngine
+      objectReference: {fileID: 0}
     - target: {fileID: 7346867942851313400, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
       propertyPath: m_Name
       value: Smutek Sad
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
+--- !u!114 &1914709148 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 5112405442795578511, guid: 1d7d2c0e42cf04549813133a06620d53, type: 3}
+  m_PrefabInstance: {fileID: 1615004677}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9d564617fd727f04cbc17283cc5ae431, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2043307408
 GameObject:
   m_ObjectHideFlags: 0
