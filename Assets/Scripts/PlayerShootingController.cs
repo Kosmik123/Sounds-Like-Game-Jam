@@ -5,13 +5,10 @@ public class PlayerShootingController : MonoBehaviour
 {
 	[SerializeField]
 	private PlayerShooting playerShooting;
-
 	[SerializeField]
 	private List<BulletsCount> bulletsCounts;
-
 	[SerializeField]
-	private BulletType currentBulletType;
-	private BulletType CurrentBulletType => currentBulletType;
+	private int currentBulletTypeIndex;
 
 	public void AddBullets(BulletType bulletType, int count)
 	{
@@ -32,8 +29,13 @@ public class PlayerShootingController : MonoBehaviour
 	{
 		if (Input.GetMouseButtonDown(0))
 		{
-			playerShooting.Shoot(CurrentBulletType);
+			var data = bulletsCounts[currentBulletTypeIndex];
+			if (data.count > 0)
+				playerShooting.Shoot(data.bulletType);
+			else
+			{
+				// empty weapon feedback
+			}
 		}
 	}
-
 }
