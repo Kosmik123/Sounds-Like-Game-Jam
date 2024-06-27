@@ -67,6 +67,7 @@ public class PlayerShootingController : MonoBehaviour
 			{
 				playerShooting.Shoot(data.bulletType);
 				audioSource.PlayOneShot(data.bulletType.Sound);
+				data.count--;
 				canShoot = false;
 				Invoke(nameof(EnableShooting), shootCooldown);
 				OnBulletsCountChanged?.Invoke(data.bulletType);
