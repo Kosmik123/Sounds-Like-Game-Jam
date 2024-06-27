@@ -14,3 +14,4 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   <BulletSprite>k__BackingField: {fileID: -3598916374439202735, guid: 95fcb86350c8a7d4fb6e39beee8b4dd9, type: 3}
   <Sound>k__BackingField: {fileID: 8300000, guid: f7ee5ae8acc4fbd4580d32b4bcddef73, type: 3}
+  <Color>k__BackingField: {r: 0.3529412, g: 0.5568628, b: 0.7568628, a: 1}
