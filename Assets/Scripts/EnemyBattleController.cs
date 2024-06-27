@@ -104,7 +104,7 @@ public class EnemyBattleController : MonoBehaviour
 			bossAnimator.SetTrigger("Death");
 			CancelInvoke();
 			bossMovement.enabled = false;
-			enaabled = false;
+			enabled = false;
 		}
 		else
 		{
