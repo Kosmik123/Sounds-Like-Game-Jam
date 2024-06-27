@@ -33,11 +33,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7011762066241556764, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -0.75441176
       objectReference: {fileID: 0}
     - target: {fileID: 7011762066241556764, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -1.9065368
       objectReference: {fileID: 0}
     - target: {fileID: 7011762066241556764, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: m_LocalPosition.z
@@ -75,6 +75,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player Realistic
       objectReference: {fileID: 0}
+    - target: {fileID: 7011762066241556765, guid: 898f749c2559b124dae5294426a43de5, type: 3}
+      propertyPath: m_TagString
+      value: Player
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 898f749c2559b124dae5294426a43de5, type: 3}
 --- !u!1 &5259199997004315615 stripped
@@ -108,25 +112,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 70c681a309ffde7489a13aff877e3674, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!114 &1253662382475038230
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5259199997004315615}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 951faa6c762c6d24996ff5a06fbc0fa9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rigidbody: {fileID: 5259199997004315611}
-  flipScale: 1
-  spriteRenderer: {fileID: 0}
-  graphic: {fileID: 6966100239862535762}
-  spritesetAnimator: {fileID: 7548167470628680714}
-  frontSprite: {fileID: 21300000, guid: 819d529fc0b06324dac0df4eee284204, type: 3}
-  backSprite: {fileID: 21300000, guid: 0dc89531979e99c428fdba880dabaecc, type: 3}
 --- !u!212 &7801999673199269742
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -178,3 +163,22 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 1
+--- !u!114 &1253662382475038230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5259199997004315615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 951faa6c762c6d24996ff5a06fbc0fa9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rigidbody: {fileID: 5259199997004315611}
+  flipScale: 1
+  spriteRenderer: {fileID: 0}
+  graphic: {fileID: 6966100239862535762}
+  spritesetAnimator: {fileID: 7548167470628680714}
+  frontSprite: {fileID: 21300000, guid: 819d529fc0b06324dac0df4eee284204, type: 3}
+  backSprite: {fileID: 21300000, guid: 0dc89531979e99c428fdba880dabaecc, type: 3}
