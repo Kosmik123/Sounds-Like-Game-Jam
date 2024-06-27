@@ -17,6 +17,9 @@ public class IsometricMovement : MonoBehaviour
 
 	private Vector2 direction;
 
+	[SerializeField]
+	private float verticalMovementModifier = 0.5f;
+
 	private void Update()
 	{
 		direction = inputProvider.Value.GetMotion();
@@ -27,7 +30,7 @@ public class IsometricMovement : MonoBehaviour
 	private void FixedUpdate()
 	{
 		var velocity = direction * speed;
-		velocity.y /= 2;
+		velocity.y *= verticalMovementModifier;
 		Rigidbody.velocity = velocity;
 	}
 }
