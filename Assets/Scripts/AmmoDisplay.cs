@@ -21,7 +21,7 @@ public class AmmoDisplay : MonoBehaviour
 		{
 			bulletType = value;
 			image.sprite = bulletType.BulletSprite;
-			label.color = bulletType.Color;
+			image.color = label.color = bulletType.Color;
 		}
 	}
 

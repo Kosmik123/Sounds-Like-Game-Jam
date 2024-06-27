@@ -130,46 +130,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 1884548705576976545, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.72966933
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884548705576976545, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884548705576976545, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884548705576976545, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0.68380016
-      objectReference: {fileID: 0}
-    - target: {fileID: 1884548705576976545, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 86.283
-      objectReference: {fileID: 0}
-    - target: {fileID: 3075661571163814495, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9956046
-      objectReference: {fileID: 0}
-    - target: {fileID: 3075661571163814495, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3075661571163814495, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3075661571163814495, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.0936565
-      objectReference: {fileID: 0}
-    - target: {fileID: 3075661571163814495, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 3229066572387688936, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
       propertyPath: m_RootOrder
       value: 0
@@ -217,26 +177,6 @@ PrefabInstance:
     - target: {fileID: 7346867942851313400, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
       propertyPath: m_Name
       value: Smutek Sad
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863997857124638447, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.9992737
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863997857124638447, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863997857124638447, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863997857124638447, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0.0381055
-      objectReference: {fileID: 0}
-    - target: {fileID: 7863997857124638447, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
