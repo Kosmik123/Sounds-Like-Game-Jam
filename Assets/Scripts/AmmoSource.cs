@@ -23,7 +23,8 @@ public class AmmoSource : MonoBehaviour
 	private void Awake()
 	{
 		currentAmmoCount = ammoCapacity;
-		spriteRenderer.sprite = note.BulletSprite;	
+		spriteRenderer.sprite = note.BulletSprite;
+		spriteRenderer.color = note.Color;
 	}
 
 	private void OnTriggerEnter2D(Collider2D collision)

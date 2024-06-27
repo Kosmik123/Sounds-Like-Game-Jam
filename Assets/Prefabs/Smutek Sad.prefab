@@ -494,6 +494,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7d2fe9b72400214a8e0f6ebad92afc4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteRenderer: {fileID: 1029315038256025616}
   bossAnimator: {fileID: 8307098791818897160}
   minIdleDuration: 4
   maxIdleDuration: 7
@@ -503,10 +504,19 @@ MonoBehaviour:
   attackSounds: []
   damagePoints:
   - {fileID: 1446690666720105325}
-  weakType: {fileID: 0}
   maxHealth: 10
   health: 0
-  bossMovement: {fileID: 0}
+  weakType: {fileID: 0}
+  availableTypes:
+  - {fileID: 11400000, guid: 974be6d5b5be6494592749f188009d74, type: 2}
+  - {fileID: 11400000, guid: 8cde16a9c6b70134ea26ca1e54ba83a9, type: 2}
+  - {fileID: 11400000, guid: 8a694f1cced229e49af03684e2c872fb, type: 2}
+  - {fileID: 11400000, guid: 3d7f34870b28bbf48a4e70dec80dbfb4, type: 2}
+  - {fileID: 11400000, guid: ac3a7dcda9d77594291aad14d706e6e7, type: 2}
+  - {fileID: 11400000, guid: df381d5bde019a3438b5437484e36a60, type: 2}
+  minWeakTypeChangeDelay: 2
+  maxWeakTypeChangeDelay: 6
+  bossMovement: {fileID: 3988587523995954364}
 --- !u!114 &3988587523995954364
 MonoBehaviour:
   m_ObjectHideFlags: 0
