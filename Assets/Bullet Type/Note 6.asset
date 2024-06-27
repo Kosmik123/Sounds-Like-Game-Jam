@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Note 6
   m_EditorClassIdentifier: 
   <BulletSprite>k__BackingField: {fileID: -2870236734101642953, guid: 95fcb86350c8a7d4fb6e39beee8b4dd9, type: 3}
-  <Sound>k__BackingField: {fileID: 8300000, guid: 75b7a15171facdb49ab3781c6eccf1d1, type: 3}
+  <Sound>k__BackingField: {fileID: 8300000, guid: a2beffcc34eb1204195e75a0b0879173, type: 3}
   <Color>k__BackingField: {r: 0.8431373, g: 0.62352943, b: 0.46274513, a: 1}
