@@ -1,4 +1,5 @@
 ﻿using Bipolar.Pooling;
+using NaughtyAttributes;
 using UnityEngine;
 
 public class BulletsPool : ObjectPool<Bullet> { }
@@ -9,13 +10,19 @@ public class PlayerShooting : MonoBehaviour
 
 	[SerializeField]
 	private Bullet bulletPrototype;
-
 	private BulletsPool bulletsPool;
 
+	[SerializeField]
+	private Transform bulletsOrigin;
+
+	[Header("Animation")]
 	[SerializeField]
 	private Transform arm;
 	[SerializeField]
 	private Transform body;
+
+	[SerializeField, ReadOnly]
+	private Vector2 direction;
 
 	private void Awake()
 	{
@@ -28,7 +35,7 @@ public class PlayerShooting : MonoBehaviour
 	{
 		var screenMousePosition = Input.mousePosition;
 		var worldMousePosition = Camera.main.ScreenToWorldPoint(screenMousePosition);
-		var direction = worldMousePosition - transform.position;
+		direction = worldMousePosition - transform.position;
 		float armAngle = Vector2.SignedAngle(Vector2.right, direction);
 		
 		var bodyScale = body.localScale;
@@ -42,17 +49,14 @@ public class PlayerShooting : MonoBehaviour
 			armAngle += 180;
 				
 		arm.rotation = Quaternion.AngleAxis(armAngle, Vector3.forward);
-		if (Input.GetMouseButtonDown(0))
-		{
-			Shoot(direction);
-		}
 	}
 
-	private void Shoot(Vector2 direction)
+	public void Shoot(BulletType bulletType)
 	{
 		var bullet = bulletsPool.Get();
 		bullet.Init(bulletsPool);
-		bullet.transform.position = transform.position;
+		bullet.BulletType = bulletType;
+		bullet.transform.position = bulletsOrigin.position;
 		bullet.Shoot(direction);
 	}
 }

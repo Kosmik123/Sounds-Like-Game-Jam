@@ -11,6 +11,9 @@ public class Bullet : MonoBehaviour
 	private IObjectPool<Bullet> sourcePool;
 
 	[SerializeField]
+	private SpriteRenderer graphic;
+
+	[SerializeField]
 	private float lifeDuration = 10;
 
 	[SerializeField]
@@ -21,10 +24,23 @@ public class Bullet : MonoBehaviour
 		set => speed = value;
 	}
 
+	[SerializeField]
+	private BulletType bulletType;
+	public BulletType BulletType
+	{
+		get => bulletType;
+		set
+		{
+			bulletType = value;
+			graphic.sprite = bulletType.BulletSprite;
+		}
+	}
+
 	public void Shoot(Vector2 direction)
 	{
 		gameObject.SetActive(true);
 		Rigidbody.velocity = direction.normalized * speed;
+		transform.up = direction;
 		Invoke(nameof(Kill), lifeDuration);
 	}
 
