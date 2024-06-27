@@ -31,7 +31,7 @@ public class ButtonHintsManager : MonoBehaviour
 	private void OnEnable()
 	{
 		foreach (var button in hintByButton.Keys)
-			button.OnHighlightChanged -= RefreshHint;
+			button.OnHighlightChanged += RefreshHint;
 	}
 
 	private void RefreshHint(UIButton button, bool highlighted)
