@@ -3,6 +3,8 @@ using UnityEngine;
 
 public class PlayerShootingController : MonoBehaviour
 {
+	public event System.Action OnCurrentBulletTypeChanged;
+
 	[SerializeField]
 	private PlayerShooting playerShooting;
 
@@ -16,6 +18,8 @@ public class PlayerShootingController : MonoBehaviour
 
 	[SerializeField]
 	private int currentBulletTypeIndex;
+	public int CurrentBulletTypeIndex => currentBulletTypeIndex;
+
 	[SerializeField]
 	private AudioSource audioSource;
 
@@ -75,6 +79,7 @@ public class PlayerShootingController : MonoBehaviour
 				currentBulletTypeIndex += direction;
 				currentBulletTypeIndex += bulletsCounts.Count;
 				currentBulletTypeIndex %= bulletsCounts.Count;
+				OnCurrentBulletTypeChanged?.Invoke();
 			}
 		}
 	}
