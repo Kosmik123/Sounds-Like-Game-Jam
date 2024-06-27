@@ -4302,5 +4302,27 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 575644923340493227, guid: 756b35b8beb767e479a17121913feed6, type: 3}
+      propertyPath: sceneToLoad
+      value: 'using System.Collections; using UnityEngine; using UnityEngine.SceneManagement; 
+        public class SceneChangeTrigger : MonoBehaviour {     public float teleportDelay
+        = 0.1f; // Delay before changing the scene     public string sceneToLoad;
+        // Name of the scene to load      private bool playerInTrigger = false; //
+        Tracks if the player is in the trigger area      private void Update()    
+        {         // Check if the player is in the trigger area and the "E" key is
+        pressed         if (playerInTrigger && Input.GetKeyDown(KeyCode.E))        
+        {             StartCoroutine(ChangeSceneAfterDelay());         }     }     
+        private void OnTriggerEnter2D(Collider2D collision)     {         // Check
+        if the colliding object has the "Player" tag         if (collision.CompareTag("Player"))        
+        {             playerInTrigger = true;         }     }      private void OnTriggerExit2D(Collider2D
+        collision)     {         // Check if the exiting object has the "Player"
+        tag         if (collision.CompareTag("Player"))         {             playerInTrigger
+        = false;         }     }      private IEnumerator ChangeSceneAfterDelay()    
+        {         yield return new WaitForSeconds(teleportDelay); // Wait for the
+        specified delay         ChangeScene();     }      private void ChangeScene()    
+        {         UnityEngine.Debug.Log("Changing scene to: " + sceneToLoad); //
+        Explicitly specify UnityEngine.Debug         SceneManager.LoadScene(sceneToLoad);
+        // Load the specified scene     } }'
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 756b35b8beb767e479a17121913feed6, type: 3}
