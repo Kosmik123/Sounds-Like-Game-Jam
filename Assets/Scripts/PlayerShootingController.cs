@@ -8,7 +8,7 @@ public class PlayerShootingController : MonoBehaviour
 	private PlayerShooting playerShooting;
 	[SerializeField]
 	private BulletType[] availableTypes;
-	[SerializeField, ReadOnly]
+	[SerializeField]
 	private List<BulletsCount> bulletsCounts;
 	[SerializeField]
 	private int currentBulletTypeIndex;
@@ -60,10 +60,10 @@ public class PlayerShootingController : MonoBehaviour
 		else
 		{
 			float scroll = Input.mouseScrollDelta.y;
-			float direction = Mathf.Sign(scroll);
+			int direction = (int)scroll;
 			if (direction != 0)
 			{
-				currentBulletTypeIndex += (int)direction;
+				currentBulletTypeIndex += direction;
 				currentBulletTypeIndex += bulletsCounts.Count;
 				currentBulletTypeIndex %= bulletsCounts.Count;
 			}
