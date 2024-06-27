@@ -405,6 +405,8 @@ GameObject:
   m_Component:
   - component: {fileID: 3229066572387688936}
   - component: {fileID: 8307098791818897160}
+  - component: {fileID: 4043230070586366722}
+  - component: {fileID: 3988587523995954364}
   m_Layer: 0
   m_Name: Smutek Sad
   m_TagString: Untagged
@@ -448,6 +450,39 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &4043230070586366722
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7346867942851313400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d7d2fe9b72400214a8e0f6ebad92afc4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bossAnimator: {fileID: 8307098791818897160}
+  minAttackDelay: 0
+  maxAttackDelay: 0
+--- !u!114 &3988587523995954364
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7346867942851313400}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5c1d94ccd73ad141b8983d51b12f5c9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  moveInterval: 2
+  moveRadius: 15
+  maxMoveDistance: 10
+  moveSpeed: 5
+  player: {fileID: 0}
+  preferredDistanceToPlayer: 10
 --- !u!1 &7382300426680925668
 GameObject:
   m_ObjectHideFlags: 0
