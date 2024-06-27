@@ -1,6 +1,7 @@
 using Bipolar;
 using NaughtyAttributes;
 using UnityEngine;
+using UnityEngine.Events;
 
 public class EnemyBattleController : MonoBehaviour
 {
@@ -58,6 +59,9 @@ public class EnemyBattleController : MonoBehaviour
 
 	[SerializeField]
 	private ParticleSystemsArray[] particleSystemsByAttack;
+
+	[SerializeField]
+	private UnityEvent onDeath;
 
 	[System.Serializable]
 	public class ParticleSystemsArray
@@ -144,11 +148,18 @@ public class EnemyBattleController : MonoBehaviour
 			enabled = false;
 			foreach (var systems in particleSystemsByAttack)
 				systems.Stop();
+
+			Invoke(nameof(InvokeDeathEvent), 2);
 		}
 		else
 		{
 			audioSource.PlayOneShot(damageSound);
 		}
+	}
+
+	private void InvokeDeathEvent()
+	{
+		onDeath.Invoke();
 	}
 
 	private void ChangeWeakType()

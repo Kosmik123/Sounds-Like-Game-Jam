@@ -533,6 +533,9 @@ MonoBehaviour:
     - {fileID: 4062243479081586847}
   - array:
     - {fileID: 8679691174511534537}
+  onDeath:
+    m_PersistentCalls:
+      m_Calls: []
 --- !u!114 &3988587523995954364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -750,7 +753,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1674430792515297713, guid: 1829ae1f2fedec5489e78e1f68b8358c, type: 3}
       propertyPath: prewarm
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1674430792515297713, guid: 1829ae1f2fedec5489e78e1f68b8358c, type: 3}
       propertyPath: playOnAwake
@@ -869,7 +872,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6494111796957995068, guid: 58c5e0b2ba5500341b58316cc6e65662, type: 3}
       propertyPath: prewarm
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6494111796957995068, guid: 58c5e0b2ba5500341b58316cc6e65662, type: 3}
       propertyPath: playOnAwake
@@ -900,7 +903,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2068235421312890898, guid: b630a67375a037c4bbd7758a19fe3cce, type: 3}
       propertyPath: prewarm
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2068235421312890898, guid: b630a67375a037c4bbd7758a19fe3cce, type: 3}
       propertyPath: playOnAwake
@@ -1023,7 +1026,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7421735795915304389, guid: 58916589cd27111479d8a3825ae41e92, type: 3}
       propertyPath: prewarm
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7421735795915304389, guid: 58916589cd27111479d8a3825ae41e92, type: 3}
       propertyPath: playOnAwake
@@ -1098,7 +1101,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5143032823503869895, guid: a7f2313ee9c94134991aeeaff79e4d70, type: 3}
       propertyPath: prewarm
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5143032823503869895, guid: a7f2313ee9c94134991aeeaff79e4d70, type: 3}
       propertyPath: playOnAwake
