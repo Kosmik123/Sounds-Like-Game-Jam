@@ -1,3 +1,4 @@
+using NaughtyAttributes;
 using UnityEngine;
 
 public class EnemyBattleController : MonoBehaviour
@@ -15,6 +16,7 @@ public class EnemyBattleController : MonoBehaviour
 
 	public float AttackDelay => Random.Range(minAttackDelay, maxAttackDelay);
 
+	[SerializeField, ReadOnly]
 	private bool isAttacking;
 	public bool IsAttacking => isAttacking;
 

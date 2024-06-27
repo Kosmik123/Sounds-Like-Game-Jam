@@ -24,6 +24,9 @@ public class PlayerShooting : MonoBehaviour
 	[SerializeField, ReadOnly]
 	private Vector2 direction;
 
+	[SerializeField]
+	private Transform crosshair;
+
 	private void Awake()
 	{
 		bulletsPool = gameObject.AddComponent<BulletsPool>();
@@ -35,9 +38,13 @@ public class PlayerShooting : MonoBehaviour
 	{
 		var screenMousePosition = Input.mousePosition;
 		var worldMousePosition = Camera.main.ScreenToWorldPoint(screenMousePosition);
+		worldMousePosition.z = transform.position.z;
 		direction = worldMousePosition - transform.position;
 		float armAngle = Vector2.SignedAngle(Vector2.right, direction);
-		
+
+		if (crosshair)
+			crosshair.position = worldMousePosition;
+
 		var bodyScale = body.localScale;
 		if (direction.x < -SmallNumber)
 			bodyScale.x = -1;

@@ -47,7 +47,9 @@ public class BossMovement : MonoBehaviour
             attempts++;
             if (attempts > maxAttempts)
             {
-                Debug.LogWarning("CalculateNewPosition: Max attempts reached, using fallback position.");
+                newPosition = initialPosition;
+
+				Debug.LogWarning("CalculateNewPosition: Max attempts reached, using fallback position.");
                 break;
             }
         } while (Vector2.Distance(newPosition, player.position) > preferredDistanceToPlayer || Vector2.Distance(newPosition, initialPosition) > moveRadius);

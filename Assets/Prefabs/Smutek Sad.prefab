@@ -463,8 +463,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bossAnimator: {fileID: 8307098791818897160}
-  minAttackDelay: 0
-  maxAttackDelay: 0
+  minAttackDelay: 3
+  maxAttackDelay: 8
+  isAttacking: 0
 --- !u!114 &3988587523995954364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -482,7 +483,7 @@ MonoBehaviour:
   maxMoveDistance: 10
   moveSpeed: 5
   player: {fileID: 0}
-  preferredDistanceToPlayer: 10
+  preferredDistanceToPlayer: 15
 --- !u!1 &7382300426680925668
 GameObject:
   m_ObjectHideFlags: 0

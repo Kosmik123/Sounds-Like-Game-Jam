@@ -283,11 +283,15 @@ ParentConstraint:
   m_GameObject: {fileID: 280749105}
   m_Enabled: 1
   m_Weight: 1
-  m_TranslationAtRest: {x: 0, y: 1.78, z: -10}
+  m_TranslationAtRest: {x: 0.5037783, y: -0.5700207, z: -10}
   m_RotationAtRest: {x: 0, y: 0, z: 0}
   m_TranslationOffsets:
-  - {x: 0, y: 0.99799997, z: -10}
+  - {x: 0, y: 0.998, z: -10}
+  - {x: 0, y: 0.998, z: -10}
+  - {x: 0, y: 0.998, z: -10}
   m_RotationOffsets:
+  - {x: 0, y: 0, z: 0}
+  - {x: 0, y: 0, z: 0}
   - {x: 0, y: 0, z: 0}
   m_AffectTranslationX: 1
   m_AffectTranslationY: 1
@@ -299,6 +303,10 @@ ParentConstraint:
   m_IsLocked: 1
   m_Sources:
   - sourceTransform: {fileID: 565762869}
+    weight: 1
+  - sourceTransform: {fileID: 1541564900}
+    weight: 1
+  - sourceTransform: {fileID: 1216907925}
     weight: 1
 --- !u!114 &280749107
 MonoBehaviour:
@@ -368,7 +376,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 2.5
+  orthographic size: 10
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -392,7 +400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280749105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5037783, y: -0.5700207, z: -10}
+  m_LocalPosition: {x: 2.702519, y: -0.7806805, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -45671,6 +45679,11 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.32}
+--- !u!4 &1216907925 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3229066572387688936, guid: fa3c3ca0ec1fc5c49bbc2567bf80a642, type: 3}
+  m_PrefabInstance: {fileID: 1913469516}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1541564899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -45732,6 +45745,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: cb82fadd16f8b8f4091ea3bea6764153, type: 3}
+--- !u!4 &1541564900 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 524578323327762294, guid: cb82fadd16f8b8f4091ea3bea6764153, type: 3}
+  m_PrefabInstance: {fileID: 1541564899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1548473988
 GameObject:
   m_ObjectHideFlags: 0
