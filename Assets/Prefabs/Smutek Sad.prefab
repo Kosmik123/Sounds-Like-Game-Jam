@@ -752,6 +752,10 @@ PrefabInstance:
       propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 1674430792515297713, guid: 1829ae1f2fedec5489e78e1f68b8358c, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3719054566195110033, guid: 1829ae1f2fedec5489e78e1f68b8358c, type: 3}
       propertyPath: m_Name
       value: Particles Atack 1 for bone 12
@@ -867,6 +871,10 @@ PrefabInstance:
       propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 6494111796957995068, guid: 58c5e0b2ba5500341b58316cc6e65662, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 9133231629368156444, guid: 58c5e0b2ba5500341b58316cc6e65662, type: 3}
       propertyPath: m_Name
       value: Particles Atack 3 for bone 7
@@ -893,6 +901,10 @@ PrefabInstance:
     - target: {fileID: 2068235421312890898, guid: b630a67375a037c4bbd7758a19fe3cce, type: 3}
       propertyPath: prewarm
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2068235421312890898, guid: b630a67375a037c4bbd7758a19fe3cce, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5715386631460761106, guid: b630a67375a037c4bbd7758a19fe3cce, type: 3}
       propertyPath: m_Name
@@ -1013,6 +1025,10 @@ PrefabInstance:
       propertyPath: prewarm
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 7421735795915304389, guid: 58916589cd27111479d8a3825ae41e92, type: 3}
+      propertyPath: playOnAwake
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 58916589cd27111479d8a3825ae41e92, type: 3}
 --- !u!198 &1991092331895544627 stripped
@@ -1083,6 +1099,10 @@ PrefabInstance:
     - target: {fileID: 5143032823503869895, guid: a7f2313ee9c94134991aeeaff79e4d70, type: 3}
       propertyPath: prewarm
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5143032823503869895, guid: a7f2313ee9c94134991aeeaff79e4d70, type: 3}
+      propertyPath: playOnAwake
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a7f2313ee9c94134991aeeaff79e4d70, type: 3}
