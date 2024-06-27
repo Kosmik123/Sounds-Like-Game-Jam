@@ -33,6 +33,13 @@ public class EnemyBattleController : MonoBehaviour
 	[SerializeField]
 	private BulletType weakType;
 
+	[SerializeField]
+	private int maxHealth;
+	[SerializeField, ReadOnly]
+	private int health;
+	[SerializeField]
+	private BossMovement bossMovement;
+
 	private void OnEnable()
 	{
 		foreach (var damagable in damagePoints)
@@ -41,10 +48,20 @@ public class EnemyBattleController : MonoBehaviour
 
 	private void Damagable_OnDamaged(BulletType bulletType)
 	{
+		if (isAttacking)
+			return;
+
+		bossAnimator.SetTrigger("Damage");
+		health -= bulletType == weakType ? 2 : 1;
+		if (health <= 0)
+		{
+			bossAnimator.SetTrigger("Death");
+		}
 	}
 
 	private void Start()
 	{
+		health = maxHealth;
 		Invoke(nameof(PrepareToAttack), IdleDuration);
 	}
 
@@ -59,7 +76,8 @@ public class EnemyBattleController : MonoBehaviour
 	private int randomAttack = 1;
 	private void Attack()
 	{
-		bossAnimator.SetInteger(AttackParam, randomAttack);
+		if (health > 0)
+			bossAnimator.SetInteger(AttackParam, randomAttack);
 	}
 
 	// called from animation event
