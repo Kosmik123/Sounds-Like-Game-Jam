@@ -56,12 +56,36 @@ public class EnemyBattleController : MonoBehaviour
 	[SerializeField]
 	private BossMovement bossMovement;
 
+	[SerializeField]
+	private ParticleSystemsArray[] particleSystemsByAttack;
+
+	[System.Serializable]
+	public class ParticleSystemsArray
+	{
+		public ParticleSystem[] array; 
+
+		public void Start()
+		{
+			foreach (var system in array)
+				system.Play();
+		}
+
+		public void Stop()
+		{
+			foreach (var system in array)
+				system.Stop();
+		}
+
+	}
+
 	private void OnEnable()
 	{
 		foreach (var damagable in damagePoints)
 			damagable.OnDamaged += Damagable_OnDamaged;
-	}
 
+		foreach (var systems in particleSystemsByAttack)
+			systems.Stop();
+	}
 
 	private void Start()
 	{
@@ -82,7 +106,17 @@ public class EnemyBattleController : MonoBehaviour
 	private void Attack()
 	{
 		if (health > 0)
+		{
 			bossAnimator.SetInteger(AttackParam, randomAttack);
+            for (int i = 0; i < particleSystemsByAttack.Length; i++)
+            {
+				int attackIndex = i + 1;
+				if (attackIndex == randomAttack)
+					particleSystemsByAttack[i].Start();
+				else
+					particleSystemsByAttack[i].Stop();
+            }
+        }
 	}
 
 	// called from animation event
@@ -90,6 +124,8 @@ public class EnemyBattleController : MonoBehaviour
 	{
 		isAttacking = false;
 		Invoke(nameof(PrepareToAttack), IdleDuration);
+		foreach (var systems in particleSystemsByAttack)
+			systems.Stop();
 	}
 
 	private void Damagable_OnDamaged(BulletType bulletType)
@@ -105,6 +141,8 @@ public class EnemyBattleController : MonoBehaviour
 			CancelInvoke();
 			bossMovement.enabled = false;
 			enabled = false;
+			foreach (var systems in particleSystemsByAttack)
+				systems.Stop();
 		}
 		else
 		{
