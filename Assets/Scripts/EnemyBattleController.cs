@@ -107,6 +107,7 @@ public class EnemyBattleController : MonoBehaviour
 	{
 		if (health > 0)
 		{
+			Invoke(nameof(FinishAttack), 2f);
 			bossAnimator.SetInteger(AttackParam, randomAttack);
             for (int i = 0; i < particleSystemsByAttack.Length; i++)
             {
