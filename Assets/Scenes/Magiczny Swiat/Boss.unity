@@ -307,7 +307,7 @@ ParentConstraint:
   - sourceTransform: {fileID: 1541564900}
     weight: 0
   - sourceTransform: {fileID: 1216907925}
-    weight: 0
+    weight: 0.5
 --- !u!114 &280749107
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -376,7 +376,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 6.409656
+  orthographic size: 4.930545
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -400,7 +400,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 280749105}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.5037783, y: -0.7806805, z: -10}
+  m_LocalPosition: {x: 2.702519, y: -0.9913403, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
