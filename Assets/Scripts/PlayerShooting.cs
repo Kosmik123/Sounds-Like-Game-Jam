@@ -14,8 +14,6 @@ public class PlayerShooting : MonoBehaviour
 
 	[SerializeField]
 	private Transform bulletsOrigin;
-	[SerializeField]
-	private AudioSource audioSource;
 
 	[Header("Animation")]
 	[SerializeField]
@@ -55,7 +53,6 @@ public class PlayerShooting : MonoBehaviour
 
 	public void Shoot(BulletType bulletType)
 	{
-		audioSource.PlayOneShot(bulletType.Sound);
 		var bullet = bulletsPool.Get();
 		bullet.Init(bulletsPool);
 		bullet.BulletType = bulletType;

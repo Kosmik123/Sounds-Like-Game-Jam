@@ -207,7 +207,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrototype: {fileID: 815836511786010033, guid: f76c01c5bac0a80448054e12609df766, type: 3}
   bulletsOrigin: {fileID: 7311230172188228738}
-  audioSource: {fileID: 3324160719613802596}
   arm: {fileID: 2220579144384392524}
   body: {fileID: 4216872010913788760}
   direction: {x: 0, y: 0}
@@ -233,7 +232,9 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 974be6d5b5be6494592749f188009d74, type: 2}
   bulletsCounts: []
   currentBulletTypeIndex: 0
+  audioSource: {fileID: 3324160719613802596}
   shootCooldown: 1
+  emptySound: {fileID: 8300000, guid: 7d1587a6c0ea6164398ebd15d8b376bf, type: 3}
 --- !u!82 &3324160719613802596
 AudioSource:
   m_ObjectHideFlags: 0

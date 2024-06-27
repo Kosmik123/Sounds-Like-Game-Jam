@@ -1,22 +1,30 @@
-﻿using NaughtyAttributes;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerShootingController : MonoBehaviour
 {
 	[SerializeField]
 	private PlayerShooting playerShooting;
+
 	[SerializeField]
 	private BulletType[] availableTypes;
+	public IReadOnlyList<BulletType> AvailableTypes => availableTypes;
+
 	[SerializeField]
 	private List<BulletsCount> bulletsCounts;
+	public IReadOnlyList<BulletsCount> BulletsCounts => bulletsCounts;
+
 	[SerializeField]
 	private int currentBulletTypeIndex;
+	[SerializeField]
+	private AudioSource audioSource;
 
 	[SerializeField]
 	private float shootCooldown;
 	private bool canShoot;
 
+	[SerializeField]
+	private AudioClip emptySound;
 
 	private void Awake()
 	{
@@ -49,12 +57,13 @@ public class PlayerShootingController : MonoBehaviour
 			if (data.count > 0)
 			{
 				playerShooting.Shoot(data.bulletType);
+				audioSource.PlayOneShot(data.bulletType.Sound);
 				canShoot = false;
 				Invoke(nameof(EnableShooting), shootCooldown);
 			}
 			else
 			{
-				// empty weapon feedback
+				audioSource.PlayOneShot(emptySound);
 			}
 		}
 		else
