@@ -104,9 +104,9 @@ public class EnemyBattleController : MonoBehaviour
 			bossAnimator.SetTrigger("Death");
 			CancelInvoke();
 			bossMovement.enabled = false;
-			enaabled = faaa;aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa
+			enaabled = false;
 		}
-		else 
+		else
 		{
 			audioSource.PlayOneShot(damageSound);
 		}
