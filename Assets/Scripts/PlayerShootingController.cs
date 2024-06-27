@@ -4,6 +4,7 @@ using UnityEngine;
 public class PlayerShootingController : MonoBehaviour
 {
 	public event System.Action OnCurrentBulletTypeChanged;
+	public event System.Action<BulletType> OnBulletsCountChanged;
 
 	[SerializeField]
 	private PlayerShooting playerShooting;
@@ -40,11 +41,15 @@ public class PlayerShootingController : MonoBehaviour
 
 	public void AddBullets(BulletType bulletType, int count)
 	{
+		if (count < 0)
+			return;
+
 		int index = bulletsCounts.FindIndex(data => data.bulletType == bulletType);
 		if (index >= 0)
 			bulletsCounts[index].count += count;
 		else
 			bulletsCounts.Add(new BulletsCount(bulletType, count));
+		OnBulletsCountChanged?.Invoke(bulletType);
 	}
 
 	public int GetCount(BulletType bulletType)
@@ -64,6 +69,7 @@ public class PlayerShootingController : MonoBehaviour
 				audioSource.PlayOneShot(data.bulletType.Sound);
 				canShoot = false;
 				Invoke(nameof(EnableShooting), shootCooldown);
+				OnBulletsCountChanged?.Invoke(data.bulletType);
 			}
 			else
 			{
@@ -76,7 +82,7 @@ public class PlayerShootingController : MonoBehaviour
 			int direction = (int)scroll;
 			if (direction != 0)
 			{
-				currentBulletTypeIndex += direction;
+				currentBulletTypeIndex -= direction;
 				currentBulletTypeIndex += bulletsCounts.Count;
 				currentBulletTypeIndex %= bulletsCounts.Count;
 				OnCurrentBulletTypeChanged?.Invoke();

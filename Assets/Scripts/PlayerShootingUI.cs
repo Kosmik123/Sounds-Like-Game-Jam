@@ -18,6 +18,15 @@ public class PlayerShootingUI : MonoBehaviour
 	private void OnEnable()
 	{
 		playerShootingController.OnCurrentBulletTypeChanged += PlayerShootingController_OnCurrentBulletTypeChanged;
+		playerShootingController.OnBulletsCountChanged += PlayerShootingController_OnBulletsCountChanged;
+	}
+
+	private void PlayerShootingController_OnBulletsCountChanged(BulletType bulletType)
+	{
+		if (ammoDisplaysDict.TryGetValue(bulletType, out var ammoDisplay))
+		{
+			ammoDisplay.Count = playerShootingController.GetCount(bulletType);
+		}
 	}
 
 	private void Start()
@@ -28,19 +37,22 @@ public class PlayerShootingUI : MonoBehaviour
 			ammoDisplay.BulletType = bulletType;
 			ammoDisplaysDict.Add(bulletType, ammoDisplay);
 		}
+
+		var bulletCount = playerShootingController.BulletsCounts[playerShootingController.CurrentBulletTypeIndex];
+		foreach (var ammoDisplay in ammoDisplaysDict.Values)
+			ammoDisplay.IsSelected = ammoDisplay.BulletType == bulletCount.bulletType;
 	}
 
 	private void PlayerShootingController_OnCurrentBulletTypeChanged()
 	{
 		var bulletCount = playerShootingController.BulletsCounts[playerShootingController.CurrentBulletTypeIndex];
-		if (ammoDisplaysDict.TryGetValue(bulletCount.bulletType, out var ammoDisplay))
-		{
-			ammoDisplay.Count = bulletCount.count;
-		}
+		foreach (var ammoDisplay in ammoDisplaysDict.Values)
+			ammoDisplay.IsSelected = ammoDisplay.BulletType == bulletCount.bulletType;
 	}
 
 	private void OnDisable()
 	{
 		playerShootingController.OnCurrentBulletTypeChanged -= PlayerShootingController_OnCurrentBulletTypeChanged;
+		playerShootingController.OnBulletsCountChanged -= PlayerShootingController_OnBulletsCountChanged;
 	}
 }
