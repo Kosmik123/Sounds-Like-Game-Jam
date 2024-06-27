@@ -742,11 +742,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4716074382382161608, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: currentAnimationIndex
-      value: 0
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 7011762066241556762, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: speed
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7011762066241556764, guid: 898f749c2559b124dae5294426a43de5, type: 3}
       propertyPath: m_RootOrder
