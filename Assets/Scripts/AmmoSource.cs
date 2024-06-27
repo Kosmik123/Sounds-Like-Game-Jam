@@ -1,6 +1,5 @@
 using NaughtyAttributes;
 using UnityEngine;
-using UnityEngine.Rendering;
 
 public class AmmoSource : MonoBehaviour
 {
