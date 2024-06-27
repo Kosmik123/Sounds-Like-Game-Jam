@@ -9,6 +9,8 @@ public class AmmoDisplay : MonoBehaviour
 	private Image image;
 	[SerializeField]
 	private TextMeshProUGUI label;
+	[SerializeField]
+	private GameObject selection;
 
 	[SerializeField, ReadOnly]
 	private BulletType bulletType;
@@ -19,6 +21,7 @@ public class AmmoDisplay : MonoBehaviour
 		{
 			bulletType = value;
 			image.sprite = bulletType.BulletSprite;
+			label.color = bulletType.Color;
 		}
 	}
 
@@ -31,6 +34,18 @@ public class AmmoDisplay : MonoBehaviour
 		{
 			count = value;
 			label.SetText(count.ToString());
+		}
+	}
+
+	[SerializeField, ReadOnly]
+	private bool isSelected;
+	public bool IsSelected
+	{
+		get => isSelected;
+		set
+		{
+			isSelected = value;
+			selection.SetActive(isSelected);
 		}
 	}
 }
